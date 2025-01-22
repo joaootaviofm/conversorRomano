@@ -25,7 +25,7 @@ body{
     background-color: #f4b41a;
     padding: 30px;
     border-radius: 11px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.13);
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.158);
 }
 
 .container input{
@@ -53,4 +53,10 @@ body{
 
 .container button:hover{
     opacity: .8;
+}
+
+#result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
