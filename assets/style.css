@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #143d59;
 }
 
@@ -29,9 +29,14 @@ body{
 }
 
 .container input{
-    width: 50%;
+    min-width: 50%;
     text-align: center;
-    border: none;
+    border: 0;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: #f4b41a;
+    height: 40px;
+    font-size: 17px;
+    outline: 0;
 }
 
 .container button{
@@ -42,7 +47,8 @@ body{
     border-radius: 5px;
     color: #f4b41a;
     cursor: pointer;
-    transition: opacity .4s ease-in-out
+    transition: opacity .4s ease-in-out;
+    min-width: 40%;
 }
 
 .container button:hover{
