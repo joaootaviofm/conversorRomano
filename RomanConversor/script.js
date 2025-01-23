@@ -1,9 +1,10 @@
-var conversionBtn = document.getElementById('conversionButton')
-var inputRoman = document.getElementById('algTxt')
+const conversionToDecimalBtn = document.getElementById('conversionButton')
+const conversionToRomanBtn = document.getElementById('ToRomanButton')
+const inputRoman = document.getElementById('algTxt')
 const resultArea = document.getElementById('result');
-let resultado = document.createElement('p');
+const resultado = document.createElement('p');
 
-conversionBtn.addEventListener('click', () => {
+conversionToDecimalBtn.addEventListener('click', () => {
     resultado.innerHTML = ""
     resultArea.appendChild(resultado)
     let romano = inputRoman.value.toUpperCase();
@@ -25,8 +26,7 @@ conversionBtn.addEventListener('click', () => {
     }
 
     let isValid = true;
-
-
+    
     for(let i=0;i<romano.length;i++){ 
         if(!isValidRoman(romano[i])){
             resultado.innerHTML = `"${romano}" não é um algarismo romano! Tente novamente.`
@@ -46,13 +46,22 @@ conversionBtn.addEventListener('click', () => {
         }
     }
 
-    if(isValid) {
+    if(isValid && romano != "") {
         resultado.innerHTML = `O algarismo romano ${romano} em decimal é igual a ${val}`;
     }
 
         resultArea.appendChild(resultado);
         
 })
+
+
+const resultAreaDecimal = document.getElementById('resultToRoman')
+let resultadoAreaDecimal = document.createElement('p')
+
+conversionToRomanBtn.addEventListener('click', () => {
+    
+})
+
 
 
 
