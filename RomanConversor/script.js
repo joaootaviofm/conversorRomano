@@ -55,11 +55,20 @@ conversionToDecimalBtn.addEventListener('click', () => {
 })
 
 
-const resultAreaDecimal = document.getElementById('resultToRoman')
+const AreaDecimal = document.getElementById('resultToRoman')
 let resultadoAreaDecimal = document.createElement('p')
+const inputDecimal = document.getElementById('algTxtToRoman')
+
 
 conversionToRomanBtn.addEventListener('click', () => {
+
+    resultadoAreaDecimal.innerHTML = ""
+    AreaDecimal.appendChild(resultadoAreaDecimal)
+    let decimal = Number(inputDecimal.value)
     
+    
+
+
 })
 
 
