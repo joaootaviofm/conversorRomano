@@ -25,10 +25,9 @@ conversionBtn.addEventListener('click', () => {
     }
 
 
-
     for(let i=0;i<romano.length;i++){ 
         if(!isValidRoman(romano[i])){
-            resultado.innerHTML = `A letra ${romano} não é um algarismo romano! Tente novamente.`
+            resultado.innerHTML = `"${romano}" não é um algarismo romano! Tente novamente.`
             break;
         }
         else{
