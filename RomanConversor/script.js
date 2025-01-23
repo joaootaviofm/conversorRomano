@@ -54,19 +54,52 @@ conversionToDecimalBtn.addEventListener('click', () => {
         
 })
 
-
 const AreaDecimal = document.getElementById('resultToRoman')
 let resultadoAreaDecimal = document.createElement('p')
 const inputDecimal = document.getElementById('algTxtToRoman')
 
-
 conversionToRomanBtn.addEventListener('click', () => {
-
     resultadoAreaDecimal.innerHTML = ""
     AreaDecimal.appendChild(resultadoAreaDecimal)
-    let decimal = Number(inputDecimal.value)
     
     
+    let decToRoman = [
+        {decimal : 1000, romano: 'M'},
+        {decimal : 900, romano: 'CM'},
+        {decimal : 500, romano: 'D'},
+        {decimal : 400, romano: 'CD'},
+        {decimal : 100, romano: 'C'},
+        {decimal : 90, romano: 'XC'},
+        {decimal : 50, romano: 'L'},
+        {decimal : 40, romano: 'XL'},
+        {decimal : 10, romano: 'X'},
+        {decimal : 9, romano: 'IX'},
+        {decimal : 5, romano: 'V'},
+        {decimal : 4, romano: 'IV'},
+        {decimal : 1, romano: 'I'},
+    ];
+
+    let newRomano = "";
+    let numero = Number(inputDecimal.value)
+    
+    for(let i=0; i<decToRoman.length;i++){
+        while(decToRoman[i].decimal <= numero){
+            numero -= decToRoman[i].decimal
+            newRomano += decToRoman[i].romano;
+        }
+    }
+
+
+
+    
+    resultadoAreaDecimal.innerHTML = newRomano
+    AreaDecimal.appendChild(resultadoAreaDecimal)
+
+    
+
+    
+
+
 
 
 })
