@@ -24,15 +24,18 @@ conversionBtn.addEventListener('click', () => {
         return romano in romanToDec
     }
 
+    let isValid = true;
+
 
     for(let i=0;i<romano.length;i++){ 
         if(!isValidRoman(romano[i])){
             resultado.innerHTML = `"${romano}" não é um algarismo romano! Tente novamente.`
+            isValid = false;
             break;
         }
         else{
-            let atual = romanToDec[romano[i]]
-            let prox = romanToDec[romano[i+1]]
+            const atual = romanToDec[romano[i]]
+            const prox = romanToDec[romano[i+1]]
             console.log(isValidRoman(romano[i]))
             if(atual < prox){
                 val -= atual
@@ -40,15 +43,15 @@ conversionBtn.addEventListener('click', () => {
             else{
                 val += atual
             }
-            resultado.innerHTML = `O algarismo romano ${romano} em decimal é igual a ${val}`
         }
-        }
+    }
 
-        
-        
+    if(isValid) {
+        resultado.innerHTML = `O algarismo romano ${romano} em decimal é igual a ${val}`;
+    }
+
         resultArea.appendChild(resultado);
         
-
 })
 
 
