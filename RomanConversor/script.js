@@ -81,26 +81,15 @@ conversionToRomanBtn.addEventListener('click', () => {
 
     let newRomano = "";
     let numero = Number(inputDecimal.value)
-    
+
     for(let i=0; i<decToRoman.length;i++){
         while(decToRoman[i].decimal <= numero){
             numero -= decToRoman[i].decimal
             newRomano += decToRoman[i].romano;
         }
     }
-
-
-
-    
     resultadoAreaDecimal.innerHTML = newRomano
     AreaDecimal.appendChild(resultadoAreaDecimal)
-
-    
-
-    
-
-
-
 
 })
 
